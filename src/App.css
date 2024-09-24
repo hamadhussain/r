@@ -1,4 +1,4 @@
-.App {
+ /* .App {
   text-align: center;
 }
 
@@ -35,4 +35,17 @@
   to {
     transform: rotate(360deg);
   }
+}  */
+:root{
+  --border-radius: 12px; 
+}
+
+
+.globe-container {
+  border-radius: var(--border-radius);
+
+  /* background-color: #000; Change to your desired color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
