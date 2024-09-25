@@ -207,7 +207,7 @@ const Client = () => {
             <br />
             <div className="flex justify-between items-center">
               <img src={review.imgSrc} alt="logo" className="h-16 w-16 object-cover rounded-full" />
-              <div>
+              <div className=" flex flex-col justify-start  items-start text-start">
                 <h1 className="font-extrabold">{review.name}</h1>
                 <p className="text-zinc-700">{review.title}</p>
               </div>

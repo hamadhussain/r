@@ -51,36 +51,37 @@ const Work = () => {
     //   </Canvas>
     // </div>
 
-    <section className="c-space my-20" id="work" name="Work">
-    <div className="w-full text-white-600">
-      <p className="head-text">My Work Experience</p>
-
-      <div className="work-container">
-        <div className="work-canvas">
-          <Canvas>
+    <section className="c-space my-20 " id="work" name="Work">
+    <div className="w-full text-stone-200 p-24">
+      <p className="head-tet text-5xl font-extrabold  text-white uppercase  ">My Work Experience</p><br />
+<br />
+      <div className="work-container ">
+        <div className="bg-zinc-950  work-canvas rounded-xl">
+          <Canvas >
             <ambientLight intensity={7} />
             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
             <directionalLight position={[10, 10, 10]} intensity={1} />
             <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
 
             <Suspense fallback={"loading ..."}>
-              <Developer position-y={-3} scale={3} animationName={animationName} />
+              <Developer               position={[0, -9, 0]}
+              rotation={[0.3, 0, 0]} position-y={-3} scale={2} animationName={animationName} />
             </Suspense>
           </Canvas> 
         </div>
 
-        <div className="work-content">
-          <div className="sm:py-10 py-5 sm:px-5 px-2.5">
+        <div className="work-conent relative -top-10">
+          <div className="sm:py-10 py-5 sm:px-5 px-2.5 space-y-3">
             {workExperiences.map((item, index) => (
               <div
                 key={index}
                 onClick={() => setAnimationName(item.animation.toLowerCase())}
                 onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
                 onPointerOut={() => setAnimationName('idle')}
-                className="work-content_container group">
-                <div className="flex flex-col h-full justify-start items-center py-2">
-                  <div className="work-content_logo">
-                    <img className="w-full h-full" src={item.icon} alt="" />
+                className="work-content_container group w-[700px] bg-zinc-950 gap-20 flex items-center p-10 rounded-xl">
+                <div className="flex flex-col  h-full justify-start items-center py-2">
+                  <div className="work-content_lgo">
+                    <img className="w-44 h-14" src={item.icon} alt="" />
                   </div>
 
                   <div className="work-content_bar" />

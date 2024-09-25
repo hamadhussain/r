@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { IoLogoFreebsdDevil } from "react-icons/io";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,11 +21,12 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`bg-black bg-opacty-70 fixed w-full py4 p-4 flex justify-between items-center  ${
+      className={`bg-black bg-opacty-70 fixed w-full px-14 py-4   flex justify-between items-center  ${
         scrolled ? "bg-black" : "bg-transparent"
       }`}
     >
-      <div className="text-white text-lg font-bold">Hammad</div>
+      <div className="text-white text-2xl gap-4 font-bold flex items-center"><IoLogoFreebsdDevil className="text-3xl border-2  rounded-full"/>
+      Hammad</div>
       <div className="space-x-8">
         <Link
           activeClass="active"

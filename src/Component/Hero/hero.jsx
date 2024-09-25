@@ -57,7 +57,7 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-    <div name="Services" className="intro h-screen  text-white flex justify-center items-center flex-col ">
+    <div name="Services" className=" h-screen  text-white flex justify-center items-center flex-col ">
       {/* <div className="text-center flex relative top-44 justify-center border items-center">adsasd</div> */}
       <div class="p-4 flex relative top-44 justify-center text-center items-center flex-col">
   <h1 class="font-extrabold text-2xl">Meet Our Next.js Full Stack Developer</h1>
