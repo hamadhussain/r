@@ -21,13 +21,15 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`bg-black bg-opacty-70 fixed w-full px-14 py-4   flex justify-between items-center  ${
+      className={`bg-black bg-opacty-70 fixed w-full px-14 py-4   flex justify-center sm:justify-between items-center  ${
         scrolled ? "bg-black" : "bg-transparent"
       }`}
     >
-      <div className="text-white text-2xl gap-4 font-bold flex items-center"><IoLogoFreebsdDevil className="text-3xl border-2  rounded-full"/>
-      Hammad</div>
-      <div className="space-x-8">
+      <div className="text-white text-2xl gap-4 font-bold flex items-center">
+        <IoLogoFreebsdDevil className="text-3xl border-2  rounded-full" />
+        Hammad
+      </div>
+      <div className=" sm:block hidden space-x-8">
         <Link
           activeClass="active"
           to="Home"

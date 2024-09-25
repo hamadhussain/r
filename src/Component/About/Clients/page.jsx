@@ -197,8 +197,8 @@ const Client = () => {
   ];
 
   return (
-    <div className="p-6 md:p-12 lg:p-24 flex flex-col">
-      <h1 className="text-3xl md:text-4xl w-fit">Hear from My Clients</h1>
+    <div className="p-4 md:p-12 lg:p-24 flex flex-col">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white w-full sm:w-fit  text-center">Hear from My Clients</h1>
       <br />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
         {reviews.map((review) => (
@@ -207,11 +207,11 @@ const Client = () => {
             <br />
             <div className="flex justify-between items-center">
               <img src={review.imgSrc} alt="logo" className="h-16 w-16 object-cover rounded-full" />
-              <div className=" flex flex-col justify-start  items-start text-start">
+              <div className=" flex flex-col items-end justify-start  sm:items-start text-start">
                 <h1 className="font-extrabold">{review.name}</h1>
                 <p className="text-zinc-700">{review.title}</p>
               </div>
-              <div className="flex">{stars}</div>
+              <div className="flex hidden sm:block">{stars}</div>
             </div>
           </div>
         ))}

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Clients from "./Clients/page";
 import Globe from "react-globe.gl";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { MdContentCopy } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { TiTick } from "react-icons/ti";
 
 const About = () => {
   const N = 10;
@@ -11,15 +16,19 @@ const About = () => {
     propagationSpeed: (Math.random() - 0.5) * 20 + 1,
     repeatPeriod: Math.random() * 2000 + 200,
   }));
+  const notify = () => toast("Wow so easy!");
 
   const colorInterpolator = (t) => `rgba(200,10,50,${Math.sqrt(1 - t)})`;
+  const [copied, setCopied] = useState(false);
 
   return (
-    <> 
-      <div name="About" className="h-full  p-36">
+    <>
+      <ToastContainer />
+
+      <div name="About" className="h-full p-3 sm:p-20 lg:p-36">
         <div className="grid-container ">
           <div className="item1">
-            <div className="globe-container">
+            <div className="globe-container flex sm:flex-row flex-col py-4 sm:py-0">
               <Globe
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 ringsData={gData}
@@ -78,7 +87,17 @@ const About = () => {
             <div className="grid4  h-fll h-56 "></div>
             <div className="text-lg">
               <h1 className="font-extrabold">Contact me</h1>
-              <p className="text-stone-200">bytecraft3@gmail.com</p>
+
+          <div className="flex items-center gap-3">    <CopyToClipboard
+                text={"bytecraft3@gmail.com"}
+                onCopy={() => setCopied(true)}
+                onClick={notify}
+              >
+                <button className=" border w-fit p-2">
+                  {!copied ? <MdContentCopy /> : <TiTick />}
+                </button>
+              </CopyToClipboard>
+              <p className="text-stone-200">bytecraft3@gmail.com</p></div>
             </div>
           </div>
         </div>
