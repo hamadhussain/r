@@ -57,8 +57,14 @@ const Hero = () => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return (
-    <div className=" h-screen  text-white flex justify-center items-center flex-col ">
-      <div className="text-center flex relative top-44 justify-center border items-center">adsasd</div>
+    <div name="Services" className="intro h-screen  text-white flex justify-center items-center flex-col ">
+      {/* <div className="text-center flex relative top-44 justify-center border items-center">adsasd</div> */}
+      <div class="p-4 flex relative top-44 justify-center text-center items-center flex-col">
+  <h1 class="font-extrabold text-2xl">Meet Our Next.js Full Stack Developer</h1>
+  <p class="text-stone-200 p-4 mt-2 rounded w-[700px]">
+    Specializing in Next.js, our full stack developer creates dynamic, high-performance web applications. With expertise in both frontend and backend, they turn complex requirements into elegant solutions. Let’s explore modern web development together!
+  </p>
+</div>
       
       <div className="w-full h-full">
       <Suspense fallback={<Progress/>}>

@@ -21,7 +21,7 @@ body {
   color: aliceblue;
 }
 
-.item1 {
+/* .item1 {
   grid-area: header;
 }
 .item2 {
@@ -64,16 +64,16 @@ body {
     "menu menu footer footer footer footer";
   gap: 10px;
   /* background-color: #2196F3; */
-  padding: 20px;
-}
+  /* padding: 20px;
+} */
 
-.grid-container > div {
-  /* background-color: rgba(255, 255, 255, 0.8); */
+/* .grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  /* padding: 20px 0; */
+  padding: 20px 0;
   font-size: 30px;
-  /* border: 2px solid red; */
-  /* width: fit-content; */
+  border: 2px solid red;
+  width: fit-content;
   background-color: #050607;
   border-radius: 8px;
 }
@@ -82,10 +82,10 @@ body {
   .grid-container {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: center; */
     /* justify-content: center;
     align-items: center; */
-  }
+  /* }
   .item2,
   .item3,
   .item5,
@@ -104,21 +104,39 @@ flex-direction: column;
 
 .terminal{
   background-image: url(./../public/assets/terminal.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150vh; */
+  /* width: 100vh; */
+  /* background-position: center;
+}
+
+.intro{
+  background-image: url(./../public/assets/spotlight4.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 150vh;
-  /* width: 100vh; */
-  background-position: center;
+}
+
+:root{
+  --border-radius: 12px; 
 }
 
 
+.globe-container {
+  border-radius: var(--border-radius); */
+
+  /* background-color: #000; Change to your desired color */
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 
 
 
 
 
-
+/* 
 .contact-container {
   max-width: 600px;
   margin: auto;
@@ -162,4 +180,201 @@ button {
 
 button:hover {
   background-color: #4cae4c;
+}  */
+
+
+
+
+
+
+
+
+
+
+
+
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+
+.grid1 {
+  background-image: url(./../public/assets/grid1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.grid2 {
+  background-image: url(./../public/assets/grid2.png);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  
+  background-size: contain;
+  background-position: center;
+}
+
+.grid3 {
+  background-image: url(./../public/assets/grid4.png);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  
+  background-size: contain;
+  background-position: center;
+}
+
+.grid4 {
+  background-image: url(./../public/assets/grid3.png);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  
+  background-size: contain;
+  background-position: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu menu main main right right"
+    "menu menu footer footer footer footer";
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid-container > div {
+
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  background-color: #050607;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+.grid-container > div h1 {
+  padding: 12px;
+}
+.text-lg {
+  margin-top: 10px; /* Space between image and text */
+}
+
+.grid1, .grid2, .grid3, .grid4 {
+  width: 100%;
+  max-width: 300px; /* Optional: Set max width for uniformity */
+}
+.grid4 {
+  max-width: 820px; /* Optional: Set max width for uniformity */
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item2, .item3, .item4, .item5 {
+    flex-direction: column; /* Stack for mobile */
+    gap: 20px; /* Reduce gap for better spacing */
+  }
+}
+
+.terminal {
+  background-image: url(./../public/assets/terminal.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  background-position: center;
+  /* width: fit-content; */
+}
+
+.intro {
+  background-image: url(./../public/assets/spotlight4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+:root {
+  --border-radius: 12px; 
+}
+
+.globe-container {
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cae4c;
+}
+body{
+  font-family: "Titillium Web";
+  font-weight: 400;
+  font-style: normal;
+  /* font-family: "Roboto";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; */
+}
+
+h1{
+  font-family: "Titillium Web";
+  font-weight: 700;
+  font-style: normal;
 }

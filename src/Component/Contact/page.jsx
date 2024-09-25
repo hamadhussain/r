@@ -18,6 +18,9 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  let whatsappLink = `https://wa.me/${+923462351008}?text=${encodeURIComponent(
+    "hello"
+  )}`;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,27 +32,32 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here (e.g., send to server)
     console.log("Form submitted:", formData);
-    // Reset form
     setFormData({ fullName: "", email: "", message: "" });
   };
 
   return (
-    <div className="contact-containe terminal flex flex-col  justify-center items-center">
-      <div className=" text-lg">
-        <h1 className=" font-extrabold">
-        Let's talk
-        </h1>
-        <p className=" text-stone-200">
-        Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to life, I’m here to help.        </p>
-      </div><br /><br />
-      <form onSubmit={handleSubmit}>
+    <div
+      name="Contact"
+      className=" flex flex-col overflow-hidde  justify-center items-center contact-containe p-12 terminal "
+    >
+<div className="w-[700px]">
+<div className="  text-lg text-start  justify-center items- py-7">
+        <div className=" flex flex-col  ">
+          <span className=" font-extrabold text-4xl py-3">Let's talk</span>
+          <p className=" text-stone-200">
+            Whether you’re looking to build a new website, improve your existing
+            platform, or bring a unique project to life, I’m here to help.{" "}
+          </p>
+        </div>
+      </div>
+      <br />
+      <br />
+      <form onSubmit={handleSubmit} className="  h-fit    ">
         <div className="form-group">
           <label htmlFor="full-name">Full Name</label>
           <input
-
-          className=" bg-zinc-900"
+            className=" p-10 bg-zinc-900"
             type="text"
             id="full-name"
             name="fullName"
@@ -62,7 +70,7 @@ const Contact = () => {
         <div className="form-group">
           <label htmlFor="email">Email Address</label>
           <input
-          className=" bg-zinc-900"
+            className=" p-10 bg-zinc-900"
             type="email"
             id="email"
             name="email"
@@ -75,7 +83,7 @@ const Contact = () => {
         <div className="form-group">
           <label htmlFor="message">Your Message</label>
           <textarea
-          className=" bg-zinc-900"
+            className=" p-10 bg-zinc-900"
             id="message"
             name="message"
             value={formData.message}
@@ -85,9 +93,19 @@ const Contact = () => {
           />
         </div>
         <div className="form-group">
-          <button type="submit">Send Message</button>
+          <button type="submit">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              // className="text-blue-500"
+            >
+              Send Message
+            </a>
+          </button>
         </div>
       </form>
+</div>
     </div>
   );
 };
