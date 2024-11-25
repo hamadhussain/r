@@ -43,13 +43,17 @@ const Work = () => {
   return (
     <>
       <section className="c-space my-20 hidden sm:block " id="work" name="Work">
-        <div className="w-full text-stone-200 p-24">
-          <p className="head-tet text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white ">
+        <div className="w-full p-24">
+          <p className="head-tet text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text- ">
             My Work Experience
           </p>
           <br />
           <div className="work-container ">
-            <div className="bg-zinc-950  work-canvas rounded-xl">
+            <div
+              className="    nt       
+ work-canvas rounded-xl"
+            
+            >
               <Canvas>
                 <ambientLight intensity={7} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -61,7 +65,7 @@ const Work = () => {
                     position={[0, -9, 0]}
                     rotation={[0.3, 0, 0]}
                     position-y={-3}
-                    scale={2}
+                    scale={2.6}
                     animationName={animationName}
                   />
                 </Suspense>
@@ -80,7 +84,7 @@ const Work = () => {
                       setAnimationName(item.animation.toLowerCase())
                     }
                     onPointerOut={() => setAnimationName("idle")}
-                    className="work-content_container group w-[700px] bg-zinc-950 gap-20 flex items-center p-10 rounded-xl"
+                    className="work-content_container group w-[700px] nt gap-20 flex items-center p-10 rounded-xl cursor-pointer"
                   >
                     <div className="flex flex-col  h-full justify-start items-center py-2">
                       <div className="work-content_lgo">
@@ -95,7 +99,7 @@ const Work = () => {
                       <p className="text-sm mb-5">
                         {item.pos} -- <span>{item.duration}</span>
                       </p>
-                      <p className="group-hover:text-white transition-all ease-in-out duration-500">
+                      <p className="group-hover:tex-white transition-all ease-in-out duration-500">
                         {item.title}
                       </p>
                     </div>
@@ -114,7 +118,11 @@ const Work = () => {
           </p>
           <br />
           <div className="work-container flex flex-col space-y-3 md:space-y-0 md:flex-row">
-            <div className="bg-zinc-950 work-canvas rounded-xl w-full md:w-1/2">
+            <div
+              className="                      bg-gradient-to-bl bg-opacity-35 dark:from-slate-800 dark:to-slate-950 
+ 
+ work-canvas rounded-xl w-full md:w-1/2"
+            >
               <Canvas>
                 <ambientLight intensity={0.7} />
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -145,7 +153,8 @@ const Work = () => {
                       setAnimationName(item.animation.toLowerCase())
                     }
                     onPointerOut={() => setAnimationName("idle")}
-                    className="work-content_container group w-full bg-zinc-950 gap-20 flex items-center p-5 rounded-xl"
+                    className="work-content_container group w-full            bg-slate-950 
+ gap-20 flex items-center p-5 rounded-xl"
                   >
                     <div className="flex hidden sm:block flex-col h-full justify-start items-center py-2">
                       <div className="work-content_logo">

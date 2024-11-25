@@ -218,7 +218,7 @@ const Hero = () => {
   return (
     <div
       name="Home"
-      className="intro h-ful md:h-screen text-white flex flex-col text-center md:text-start  md:flex-row justify-center items-center"
+      className="intro h-ful md:h-screen text- flex flex-col text-center md:text-start  md:flex-row justify-center items-center"
     >
       {/* <div className="flex flex-col p24 border justify-center items-center md:items-start w-[2000p max-w-lg px4 md:px0">
         <h1 className="font-extrabold flex flex-col text-xl md:text-3xl lg:text-4xl">
@@ -257,12 +257,12 @@ const Hero = () => {
       Greetings{" "}
       <IoHandLeftSharp className="waving-hand text-yellow-300" />
     </span>
-    <span className="font-extrabold lg:text-6xl">
+    <span className="font-extrabold lg:text-6xl creepster">
       Hammad Hussain,
     </span>
   </h1>
 
-  <p className="text-gray-300 p-4 mt-2 opacity-80 rounded text-center md:text-left">
+  <p className="text-gray-600 p-4 mt-2 opacity-80 rounded text-center md:text-left">
     "Bringing creativity and code together for impactful solutions. Your vision, my expertise."
   </p>
   
@@ -274,7 +274,7 @@ const Hero = () => {
     duration={500}
     className="text-white hover:text-gray-300"
   >
-    <button className="button-41 font-bold uppercase text-center flex items-center px-6 py-3 w-fit gap-2">
+    <button className="button-41 font-bold uppercase text-center flex items-center px-6 py-3 w-fit gap-6">
       Explore More
       <span className="animate-ping duration-700 font-extrabold transition-all">
         <FaCircle />

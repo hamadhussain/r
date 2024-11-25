@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { IoLogoFreebsdDevil } from "react-icons/io";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,13 +20,14 @@ const Navbar = () => {
   }, []);
   return (
     <nav
-      className={`bg-black bg-opacty-70 fixed w-full px-14 py-4   flex justify-center sm:justify-between items-center  ${
-        scrolled ? "bg-black" : "bg-transparent"
+      className={`bg-blak bg-opacty-70 fixed w-full px-14 py-4 text--300   flex justify-center sm:justify-between items-center  ${
+        scrolled ? " " : "bg-transparent"
       }`}
     >
-      <div className="text-white text-2xl gap-4 font-bold flex items-center">
-        <IoLogoFreebsdDevil className="text-3xl border-2  rounded-full" />
-        Hammad
+      <div className="text- text-2xl gap-4 font-bold flex items-center">
+        {/* <IoLogoFreebsdDevil className="text-3xl border-2  rounded-full" /> */}
+        <img src="" alt="" />
+        My Portfolio's
       </div>
       <div className=" sm:block hidden space-x-8">
         <Link
@@ -37,7 +37,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           href="#"
-          className="text-white hover:text-gray-300"
+          className="text-black hover:text-gray-700 hover:border-b-2 py-1 hover:border-black"
         >
           Home
         </Link>{" "}
@@ -48,7 +48,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           href="#"
-          className="text-white hover:text-gray-300"
+          className="text-black hover:text-gray-700 hover:border-b-2 py-1 hover:border-black"
         >
           Services
         </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           href="#"
-          className="text-white hover:text-gray-300"
+          className="text-black hover:text-gray-700 hover:border-b-2 py-1 hover:border-black"
         >
           About
         </Link>
@@ -70,7 +70,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           href="#"
-          className="text-white hover:text-gray-300"
+          className="text-black hover:text-gray-700 hover:border-b-2 py-1 hover:border-black"
         >
           Work
         </Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
           smooth={true}
           duration={500}
           href="#"
-          className="text-white hover:text-gray-300"
+          className="text-black hover:text-gray-700 hover:border-b-2 py-1 hover:border-black"
         >
           Contact
         </Link>

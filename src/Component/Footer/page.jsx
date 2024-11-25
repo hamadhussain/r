@@ -53,7 +53,7 @@ import { GrLinkedin } from "react-icons/gr";
 
 const Footer = () => {
   return (
-    <footer className="bg-none border-t-2 border-zinc-900 py-6 my-4">
+    <footer className="bg-none border-t-2 border-zinc-200 py-6 my-4">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-center px-6 md:px-12">
         <p className="text-stone-200 mb-2 md:mb-0">
           &copy; {new Date().getFullYear()} Hammad Hussain. All rights reserved.

@@ -163,33 +163,37 @@ import React from "react";
 import { FaStar } from "react-icons/fa6";
 
 const Client = () => {
-  const stars = Array(5).fill(<FaStar className="text-yellow-200" />);
+  const stars = Array(1).fill(<FaStar className="text-yellow-200" />);
 
   const reviews = [
     {
       id: 1,
-      content: "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      content:
+        "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
       name: "Emily Johnson",
       title: "Marketing Director at GreenLeaf",
       imgSrc: "assets/review1.png",
     },
     {
       id: 2,
-      content: "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.",
+      content:
+        "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.",
       name: "Mark Rogers",
       title: "Founder of TechGear Shop",
       imgSrc: "assets/review2.png",
     },
     {
       id: 3,
-      content: "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      content:
+        "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
       name: "John Dohsas",
       title: "Project Manager at UrbanTech",
       imgSrc: "assets/review3.png",
     },
     {
       id: 4,
-      content: "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend development are top-notch.",
+      content:
+        "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend development are top-notch.",
       name: "Ether Smith",
       title: "CEO of BrightStar Enterprises",
       imgSrc: "assets/review4.png",
@@ -198,20 +202,33 @@ const Client = () => {
 
   return (
     <div className="p-4 md:p-12 lg:p-24 flex flex-col">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white w-full sm:w-fit  text-center">Hear from My Clients</h1>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold capitalize text-whte w-full sm:w-fit  text-center">
+        Hear from My Clients
+      </h1>
       <br />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
         {reviews.map((review) => (
-          <div key={review.id} className="p-6 rounded-lg bg-zinc-950">
-            <p className="text-stone-300">{review.content}</p>
+          <div
+            key={review.id}
+            className="p-6 rounded-lg 
+nt
+          bg-zinc-90"
+          >
+            <p className=" opacity-65 ">{review.content}</p>
             <br />
             <div className="flex justify-between items-center">
-              <img src={review.imgSrc} alt="logo" className="h-16 w-16 object-cover rounded-full" />
-              <div className=" flex flex-col items-end justify-start  sm:items-start text-start">
-                <h1 className="font-extrabold">{review.name}</h1>
-                <p className="text-zinc-700">{review.title}</p>
+              <div className=" flex items-center gap-3">
+                <img
+                  src={review.imgSrc}
+                  alt="logo"
+                  className="h-16 w-16 object-cover rounded-full"
+                />
+                <div className=" flex flex-col items-end justify-start  sm:items-start text-start">
+                  <h1 className="font-bold uppercase">{review.name}</h1>
+                  <p className="text-zinc-700">{review.title}</p>
+                </div>
               </div>
-              <div className="flex hidden sm:block">{stars}</div>
+              <div className="fle hidden sm:block">{stars}</div>
             </div>
           </div>
         ))}

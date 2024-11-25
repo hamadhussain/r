@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Clients from "./Clients/page";
-import Globe from "react-globe.gl";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Globe from "react-globe.gl";
 import { MdContentCopy } from "react-icons/md";
+import { TiTick } from "react-icons/ti";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { TiTick } from "react-icons/ti";
+import Clients from "./Clients/page";
 
 const About = () => {
   const N = 10;
@@ -38,14 +38,17 @@ const About = () => {
                 ringRepeatPeriod="repeatPeriod"
                 height={326}
                 width={326}
-                backgroundColor="#050607"
+                backgroundColor="rgba(0, 0, 0, 0)"  // Set transparent background
+
+                // backgroundColor="#064e3b"
+                // className=" bg-red-300"
               />
               <div className="text-lg">
                 <h1 className="font-extrabold">
                   I’m very flexible with time zone communications & locations
                 </h1>
-                <p className="text-stone-200">
-                  I'm based in Rijeka, Croatia and open to remote work
+                <p className="text--200">
+                  I'm based in Karachi, Pakistan and open to remote work
                   worldwide.
                 </p>
               </div>
@@ -55,7 +58,7 @@ const About = () => {
             <div className="grid1 h-56"></div>
             <div className="text-lg">
               <h1 className="font-extrabold">Tech Stack</h1>
-              <p className="text-stone-200">
+              <p className="text--200">
                 I specialize in a variety of languages, frameworks, and tools
                 that allow me to build robust and scalable applications
               </p>
@@ -64,8 +67,8 @@ const About = () => {
           <div className="item3">
             <div className="grid2 h-56"></div>
             <div className="text-lg">
-              <h1 className="font-extrabold">Hi, I’m Adrian Hajdin</h1>
-              <p className="text-stone-200">
+              <h1 className="font-extrabold">Hi, I’m Hammad Hussain</h1>
+              <p className="text--200">
                 With 12 years of experience, I have honed my skills in both
                 frontend and backend dev, creating dynamic and responsive
                 websites.
@@ -76,7 +79,7 @@ const About = () => {
             <div className="grid3 h-56"></div>
             <div className="text-lg">
               <h1 className="font-extrabold">My Passion for Coding</h1>
-              <p className="text-stone-200">
+              <p className="text--200">
                 I love solving problems and building things through code.
                 Programming isn't just my profession—it's my passion. I enjoy
                 exploring new technologies, and enhancing my skills.{" "}
@@ -97,7 +100,7 @@ const About = () => {
                   {!copied ? <MdContentCopy /> : <TiTick />}
                 </button>
               </CopyToClipboard>
-              <p className="text-stone-200">bytecraft3@gmail.com</p></div>
+              <p className="text--200">bytecraft3@gmail.com</p></div>
             </div>
           </div>
         </div>

@@ -160,7 +160,7 @@ const Contact = () => {
         <div className="text-lg text-start py-7">
           <div className="flex flex-col">
             <span className="font-extrabold text-3xl md:text-4xl py-3">Let's talk</span>
-            <p className="text-stone-200">
+            <p className="">
               Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to life, I’m here to help.
             </p>
           </div>
@@ -168,35 +168,35 @@ const Contact = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="form-group">
-            <label htmlFor="full-name" className="block text-sm font-medium text-gray-300">Full Name</label>
+            <label htmlFor="full-name" className="block text-sm font-medium text-gra-300">Full Name</label>
             <input
-              className="w-full p-3 bg-zinc-900 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+              className="w-full p-3 nt rounded-sm focus:outline-none focus:ring focus:ring-green-500"
               type="text"
               id="full-name"
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
               required
-              placeholder="ex., John Doe"
+              placeholder="Enter Name"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300">Email Address</label>
+            <label htmlFor="email" className="block text-sm font-medium text-gry-300">Email Address</label>
             <input
-              className="w-full p-3 bg-zinc-900 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+              className="w-full p-3 nt rounded-sm focus:outline-none focus:ring focus:ring-green-500"
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              placeholder="ex., johndoe@gmail.com"
+              placeholder="Enter Email"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="message" className="block text-sm font-medium text-gray-300">Your Message</label>
+            <label htmlFor="message" className="block text-sm font-medium text-gry-300">Your Message</label>
             <textarea
-              className="w-full p-3 bg-zinc-900 rounded-md focus:outline-none focus:ring focus:ring-green-500"
+              className="w-full p-3 nt rounded-sm focus:outline-none focus:ring focus:ring-green-500"
               id="message"
               name="message"
               value={formData.message}
@@ -212,7 +212,7 @@ const Contact = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full p-3 text-center bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200"
+                className="block w-full text-center bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200"
               >
                 Send Message
               </a>

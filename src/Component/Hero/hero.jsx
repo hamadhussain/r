@@ -131,7 +131,7 @@ const Hero = () => {
   return (
     <div
       name="Services"
-      className="h-screen text-white flex flex-col-reverse md:flex-row justify-center items-center"
+      className="h-screen text- flex flex-col-reverse md:flex-row justify-center items-center"
     >
       <div className="w-full h-full flex justify-center items-center">
         <Suspense fallback={<Progress />}>
@@ -151,11 +151,11 @@ const Hero = () => {
           </Canvas>
         </Suspense>
       </div>
-      <div className="flex flex-col justify-center text-center items-center p-4 md:w-1/2">
+      <div className="flex flex-col justify-end text-end items- p-4 md:w-1/2">
         <h1 className="font-extrabold text-2xl md:text-3xl lg:text-4xl">
           Meet Our Next.js Full Stack Developer
         </h1>
-        <p className="text-stone-200 p-4 mt-2 rounded w-full max-w-lg">
+        <p className=" p-4 mt-2 rounded w-full max-w-lg text-center">
           Specializing in Next.js, our full stack developer creates dynamic,
           high-performance web applications. With expertise in both frontend and
           backend, they turn complex requirements into elegant solutions. Let’s
