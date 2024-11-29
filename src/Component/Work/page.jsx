@@ -112,16 +112,16 @@ const Work = () => {
       </section>
 
       <section className="c-space my-20 block sm:hidden" id="work" name="Work">
-        <div className="w-full text-stone-200 p-6 md:p-24">
-          <p className="head-tet text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white text-center">
+        <div className="w-full p- md:p-24">
+          <p className="head-tet text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold  text-center">
             My Work Experience
           </p>
           <br />
           <div className="work-container flex flex-col space-y-3 md:space-y-0 md:flex-row">
             <div
-              className="                      bg-gradient-to-bl bg-opacity-35 dark:from-slate-800 dark:to-slate-950 
+              className="                      bg-gradient-o-bl bg-opacity-35 dark:from-slate-800 dark:to-slate-950 
  
- work-canvas rounded-xl w-full md:w-1/2"
+ work-canvas rounded-xl w-full md:w-1/2 md:block hidden"
             >
               <Canvas>
                 <ambientLight intensity={0.7} />
@@ -142,7 +142,7 @@ const Work = () => {
             </div>
 
             <div className="work-content relative -top-10 w-full md:w-1/2">
-              <div className="sm:py-10 py-5 sm:px-5 px-2.5 space-y-3">
+              <div className="sm:py-10 py-5 sm:px-5 px2.5 space-y-3">
                 {workExperiences.map((item, index) => (
                   <div
                     key={index}
@@ -153,7 +153,7 @@ const Work = () => {
                       setAnimationName(item.animation.toLowerCase())
                     }
                     onPointerOut={() => setAnimationName("idle")}
-                    className="work-content_container group w-full            bg-slate-950 
+                    className="work-content_container group w-full            bg-slte-950 
  gap-20 flex items-center p-5 rounded-xl"
                   >
                     <div className="flex hidden sm:block flex-col h-full justify-start items-center py-2">
@@ -168,7 +168,7 @@ const Work = () => {
                       <p className="text-sm mb-5">
                         {item.pos} -- <span>{item.duration}</span>
                       </p>
-                      <p className="group-hover:text-white transition-all ease-in-out duration-500">
+                      <p className="group-hover:font-bold transition-all ease-in-out duration-500">
                         {item.title}
                       </p>
                     </div>

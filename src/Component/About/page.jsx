@@ -27,8 +27,8 @@ const About = () => {
 
       <div name="About" className="h-full p-3 sm:p-20 lg:p-36">
         <div className="grid-container ">
-          <div className="item1">
-            <div className="globe-container flex sm:flex-row flex-col py-4 sm:py-0">
+          <div className="item1 hidden bloc">
+            <div className="globe-container  flex sm:flex-row flex-col py-4 sm:py-0">
               <Globe
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 ringsData={gData}
@@ -38,10 +38,7 @@ const About = () => {
                 ringRepeatPeriod="repeatPeriod"
                 height={326}
                 width={326}
-                backgroundColor="rgba(0, 0, 0, 0)"  // Set transparent background
-
-                // backgroundColor="#064e3b"
-                // className=" bg-red-300"
+                backgroundColor="rgba(0, 0, 0, 0)"  
               />
               <div className="text-lg">
                 <h1 className="font-extrabold">

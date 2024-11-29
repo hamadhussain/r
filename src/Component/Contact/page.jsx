@@ -152,25 +152,30 @@ const Contact = () => {
   };
 
   return (
-    <div
+   <>
+   <div className=" flex justify-center gap-24  
+    items-center">
+   <img src="/assets/co.png" className=" max-w-md hidden lg:block" alt="" />
+
+   <div
       name="Contact"
-      className="flex flex-col justify-center items-center  p-6 md:p-12 sm:terminal"
+      className="flex flex-col justify-center items-center  p-1 md:p-2 md:py-4 sm:p-6 lg:p-12 sm:terminal"
     >
-      <div className="w-full max-w-xl">
+      <div className="w-ful px-12 ">
         <div className="text-lg text-start py-7">
           <div className="flex flex-col">
-            <span className="font-extrabold text-3xl md:text-4xl py-3">Let's talk</span>
-            <p className="">
+            <span className="font-extrabold text-2xl md:text-4xl py-3">Let's talk</span>
+            <p className=" hidden md:block">
               Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to life, I’m here to help.
             </p>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="form-group">
+        <form onSubmit={handleSubmit} className=" w-96 space-y-4   ">
+          <div className="form-group ">
             <label htmlFor="full-name" className="block text-sm font-medium text-gra-300">Full Name</label>
             <input
-              className="w-full p-3 nt rounded-sm focus:outline-none focus:ring focus:ring-green-500"
+              className="w-full p-3  nt rounded-sm border-b-2 focus:outline-none focus:ring focus:ring-green-500"
               type="text"
               id="full-name"
               name="fullName"
@@ -183,7 +188,7 @@ const Contact = () => {
           <div className="form-group">
             <label htmlFor="email" className="block text-sm font-medium text-gry-300">Email Address</label>
             <input
-              className="w-full p-3 nt rounded-sm focus:outline-none focus:ring focus:ring-green-500"
+              className="w-full p-3 nt rounded-sm border-b-2 focus:outline-none focus:ring focus:ring-green-500"
               type="email"
               id="email"
               name="email"
@@ -196,7 +201,7 @@ const Contact = () => {
           <div className="form-group">
             <label htmlFor="message" className="block text-sm font-medium text-gry-300">Your Message</label>
             <textarea
-              className="w-full p-3 nt rounded-sm focus:outline-none focus:ring focus:ring-green-500"
+              className="w-full p-3 nt rounded-sm border-b-2 focus:outline-none focus:ring focus:ring-green-500"
               id="message"
               name="message"
               value={formData.message}
@@ -212,7 +217,7 @@ const Contact = () => {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full text-center bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-200"
+                className="bock w-full text-center bg-gren-500 text-white rounded-md hover:bg-green-600 transition duration-200"
               >
                 Send Message
               </a>
@@ -220,7 +225,10 @@ const Contact = () => {
           </div>
         </form>
       </div>
+      
     </div>
+   </div>
+   </>
   );
 };
 

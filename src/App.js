@@ -6,6 +6,14 @@ import Contact from "./Component/Contact/page";
 import Work from "./Component/Work/page";
 import Intro from "./Component/Intro/page";
 import Footer from "./Component/Footer/page";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 
 function App() {

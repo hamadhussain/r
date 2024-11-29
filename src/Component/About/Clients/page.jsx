@@ -206,7 +206,7 @@ const Client = () => {
         Hear from My Clients
       </h1>
       <br />
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10">
         {reviews.map((review) => (
           <div
             key={review.id}
@@ -223,7 +223,7 @@ nt
                   alt="logo"
                   className="h-16 w-16 object-cover rounded-full"
                 />
-                <div className=" flex flex-col items-end justify-start  sm:items-start text-start">
+                <div className=" flex flex-col items-start justify-start  sm:items-start text-start">
                   <h1 className="font-bold uppercase">{review.name}</h1>
                   <p className="text-zinc-700">{review.title}</p>
                 </div>
