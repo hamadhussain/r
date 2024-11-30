@@ -138,10 +138,18 @@ body {
   background-position: center;
 }
 
+/* Default styles for smaller screens */
 .intro {
-  background-image: url(./../public/assets/spotlight4.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: none; /* No background for smaller screens */
+}
+
+/* Styles for larger screens (e.g., desktop) */
+@media (min-width: 1024px) {
+  .intro {
+    background-image: url(./../public/assets/spotlight4.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 :root {
