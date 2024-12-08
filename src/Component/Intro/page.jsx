@@ -16,7 +16,7 @@ const Hero = () => {
 
   // Determine scale based on the device type
   let scaleValue = 6; // Default scale for larger screens
-  let positionValue = [-3, -5, 0]; // Default position for larger screens
+  let positionValue = [-3.2, -5, 0]; // Default position for larger screens
 
   if (isSmall) {
     scaleValue = 2; // Smaller scale for small screens
@@ -32,20 +32,20 @@ const Hero = () => {
   return (
     <div
       name="Home"
-      className="intro h-screen md:h-screen text- flex flex-col text-center md:text-start  md:flex-row justify-around items-center"
+      className="intro h-screen md:h-screen text- flex flex-col text-center md:text-start  md:flex-row justify-center items-center"
     >
       <div className="flex flex-col p-2 md:p-6 mt-5 md:mt-0 justify-center items-center text-center md:items-start max-w-lg sm:mx-auto">
         <h1 className="font-extrabold flex flex-col text-2xl md:text-4xl lg:text-5xl text-center md:text-left">
-          <span className="flex items-center text-lg md:text-2xl lg:text-3xl gap-2">
+          <span className="flex items-center text-lg md:text-2xl lg:text-4xl gap-2">
             Greetings{" "}
             <IoHandLeftSharp className="waving-hand text-yellow-300" />
           </span>
-          <span className="font-extrabold lg:text-6xl creepster">
+          <span className="font-extrabold lg:text-9xl creepster">
             Hammad Hussain,
           </span>
         </h1>
 
-        <p className="text-gray-600 p-4 mt-2 opacity-80 rounded text-star md:text-center md:text-left">
+        <p className="text-gray-600 p-4 mt-2 opacity-80 rounded text-star md:text-ceter md:text-left">
           "Bringing creativity and code together for impactful solutions. Your
           vision, my expertise."
         </p>
@@ -67,7 +67,7 @@ const Hero = () => {
         </Link>
       </div>
 
-      <div className="w-full md:w-[600px] h-full md:h-[90vh] flex justify-center items-center">
+      <div className="w-full md:w-[900px] h-full md:h-[90vh] flex justify-center items-center">
         <Suspense fallback={<Progress />}>
           <Canvas>
             <OrbitControls />
